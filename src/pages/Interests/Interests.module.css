@@ -1,0 +1,11 @@
+.interests{
+    width: 100%;
+    min-height: 100vh;
+    background: url('../../assets/images/Interests.png') no-repeat center fixed;
+    background-size: cover;
+}
+
+.background{
+    background-color: black;
+    opacity: 0.75;
+}

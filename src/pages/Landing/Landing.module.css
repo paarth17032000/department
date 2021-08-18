@@ -1,0 +1,44 @@
+.landing{
+    width: 100%;
+    min-height: 100vh;
+    background: url('../../assets/images/Hero.png') no-repeat center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.register_nav{
+    outline: none;
+    border: 1px solid #FFD600;
+    background-color: transparent;
+    padding: 14px 24px;
+    color: #FFFFFF;
+    transition: all 0.4s linear;
+}
+
+.register_nav:hover{
+    border: 1px solid #FFD600;
+    background-color: rgba(255, 214, 0, 0.8);
+}
+
+.register_hero{
+    border: 1px solid #FFD600;
+    background-color: #FFD600;
+    padding: 16px 24px;
+    color: black;
+}
+
+@media screen and (max-width:772px) {
+    .register_nav{
+        display: none;
+    }
+    /* .navbar{
+        display: block;
+    } */
+}

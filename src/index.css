@@ -1,13 +1,312 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  font-size: 100%;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  background: #f4f8fe !important;
+}
+:root {
+  --primaryColor: #FFFFFF;
+  --secondaryColor: #FFD600;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+  border-radius: 10px;
+}
+.container-fluid {
+  width: 100%;
+  padding: 0px !important;
+}
+.container {
+  width: 80%;
+  padding: 0px !important;
+}
+
+@font-face {
+  font-family: BebasNueue-regular;
+  src: url(../src/assets/fonts/BebasNeue-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: Barlow-regular;
+  src: url(../src/assets/fonts/Barlow-Regular.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: Barlow-medium;
+  src: url(../src/assets/fonts/Barlow-Medium.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: Barlow-semi-bold;
+  src: url(../src/assets/fonts/Barlow-SemiBold.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: Barlow-bold;
+  src: url(../src/assets/fonts/Barlow-Bold.ttf);
+  font-display: swap;
+}
+
+/* Utility classes: FONT_FAMILY */
+.font-barlow-bold {
+  margin: 0;
+  font-family: Barlow-bold;
+}
+.font-barlow-semi-bold {
+  margin: 0;
+  font-family: Barlow-semi-bold !important;
+}
+.font-barlow-medium {
+  margin: 0;
+  font-family: Barlow-medium;
+}
+.font-barlow-regular {
+  margin: 0;
+  font-family: Barlow-regular;
+}
+.font-bebas-regular {
+  margin: 0;
+  font-family: BebasNueue-regular;
+}
+
+/* Utility Classes: FONT_SIZE */
+.font-12 {
+  font-size: 12px;
+}
+.font-14 {
+  font-size: 14px;
+}
+.font-16 {
+  font-size: 16px !important;
+}
+.font-18 {
+  font-size: 18px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.font-24 {
+  font-size: 24px !important;
+}
+.font-36{
+  font-size: 36px;
+}
+.font-40 {
+  font-size: 40px;
+}
+.font-56 {
+  font-size: 56px;
+}
+
+/* line-heights */
+.line-height-33{
+  line-height: 33px;
+}
+
+/* colors */
+.text-secondaryColor {
+  color: var(--secondaryColor) !important;
+}
+.text-primaryColor {
+  color: var(--primaryColor) !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.bg-primaryColor {
+  background: var(--primaryColor) !important;
+}
+.bg-secondaryColor {
+  background: var(--secondaryColor) !important;
+}
+.bg-tertiaryColor {
+  background: var(--tertiaryColor) !important;
+}
+.bg-backgroundColor {
+  background: var(--backgroundColor);
+}
+.bg-linksColor{
+  background: var(--links) !important;
+}
+
+/* Mutual */
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: -0.004em;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
+h2.sub-heading {
+  font-size: 30px;
+}
+.bg-light-orange {
+  background: #fffaf4 !important;
+}
+.underlined-heading {
+  border-bottom: 3px solid var(--darkOrange);
+  width: 65%;
+}
+@media (max-width: 768px) {
+  .underlined-heading {
+    border-bottom: 3px solid var(--darkOrange);
+    width: 100%;
+  }
+}
+.py-section {
+  padding: 100px 0px !important;
+}
+@media only screen and (max-width: 991px) {
+  .py-section {
+    padding: 80px 0px !important;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .font-12 {
+    font-size: 12px;
+  }
+  .font-14 {
+    font-size: 14px;
+  }
+  .font-16 {
+    font-size: 16px !important;
+  }
+  .font-18 {
+    font-size: 18px;
+  }
+  .font-20 {
+    font-size: 20px;
+  }
+  .font-24 {
+    font-size: 16px !important;
+  }
+  .font-36{
+    font-size: 36px;
+  }
+  .font-40 {
+    font-size: 40px;
+  }
+  .font-56 {
+    font-size: 36px;
+  }
+}
+
+.p-100 {
+  padding: 100px 0px !important;
+}
+.p-75 {
+  padding: 75px 0px !important;
+}
+.p-50 {
+  padding: 50px 0px !important;
+}
+.p-25 {
+  padding: 25px 0px !important;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card,
+.card-header {
+  background: transparent !important;
+  border: none !important;
+}
+.letter-spacing-1 {
+  letter-spacing: -1.5px !important;
+}
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-auto {
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+}
+
+/* ul li */
+ul{
+  list-style: none;
+}
+ 
+ul li{
+  border-left: 1px solid #ADADAD;
+  padding-left: 10px;
+  color: #E0E0E0;
+  margin-top: 10px;
 }
