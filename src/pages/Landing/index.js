@@ -37,7 +37,7 @@ export default function Landing() {
                     Smart Energy, VLSI and 
                     Embedded Systems.
                 </div>
-                <div className="font-barlow-medium font-24 text-secondaryColor mt-4">24 - 25 September 2021</div>
+                <div className="font-barlow-medium font-24 text-secondaryColor mt-4">24 September 2021</div>
                 <div className="mt-5">
                     <button className={styles.register_hero}>REGISTER NOW</button>
                 </div>
