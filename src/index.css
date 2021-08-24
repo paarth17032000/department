@@ -12,8 +12,8 @@ body {
   background: #f4f8fe !important;
 }
 :root {
-  --primaryColor: #FFFFFF;
-  --secondaryColor: #FFD600;
+  --primaryColor: #421600;
+  --secondaryColor: #FF9375;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -305,8 +305,8 @@ ul{
 }
  
 ul li{
-  border-left: 1px solid #ADADAD;
+  border-left: 1px solid #FED7C2;
   padding-left: 10px;
-  color: #E0E0E0;
+  color: #FFF9F5;
   margin-top: 10px;
 }

@@ -3,9 +3,9 @@ import styles from './Interests.module.css'
 
 export default function Interests() {
     return (
-        <div className={`${styles.interests} p-100 px-4`}>
-            <div className={` ${styles.background} h-100`}>
-                <div className="font-bebas-regular font-36 text-secondaryColor text-center pt-5">TOPIC OF INTERESTS</div>
+        <div className={`${styles.interests} p-100 px-4 bg-secondaryColor`}>
+            <div className="h-100">
+                <div className="font-bebas-regular font-36 text-white text-center pt-5">TOPIC OF INTERESTS</div>
                 <div className="row mt-3 line-height-33 font-barlow-medium font-18">
                     <div className="col-xl-2 col-12"></div>
                     <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 my-2">
