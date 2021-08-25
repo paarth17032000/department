@@ -1,0 +1,10 @@
+.committee{
+    width: 100%;
+    /* min-height: 100vh; */
+    min-height: 75vh;
+}
+
+
+.card {
+    box-shadow: 2px 4px 24px rgba(0, 0, 0, 0.07);
+}

@@ -45,7 +45,7 @@ export default function Interests() {
                         </ul>
                     </div>
                     <div className="col-xl-2 col-12"></div>
-                    <div className="col-12 mb-3 text-center" style={{color: '#E0E0E0'}}>
+                    <div className="col-12 mb-3 font-barlow-medium font-16 text-primaryColor text-center text">
                         &amp; much more..
                     </div>
                 </div>
