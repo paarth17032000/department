@@ -6,7 +6,7 @@ export default function About() {
         <div className={`${styles.about} p-75`}>
             <div className="container d-flex flex-column justify-content-around align-items-center">
                 <div className="font-bebas-regular font-36 text-secondaryColor">ABOUT CONFERENCE</div>
-                <div className="font-barlow-medium font-24 text-primaryColor line-height-33 mt-5">
+                <div className="font-barlow-medium font-24 text-primaryColor line-height-33 mt-5 px-5">
                     The conference is aimed to gather scientists, engineers,
                     academicians and industry personnel to discuss latest developments
                     in Smart Energy, VLSI &amp; Embedded Systems. Smart Energy Systems

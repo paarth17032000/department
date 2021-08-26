@@ -8,10 +8,10 @@ export default function Committee() {
         <div className={`${styles.committee} p-75`}>
             <div className="container d-flex flex-column justify-content-around align-items-center">
                 <div className="font-bebas-regular font-36 text-secondaryColor">COMMITTEE</div>
-                <div className="row mt-5 mx-auto">
+                <div className="row mt-5 mx-5">
                     <div className="col-12 center">
                         <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"400px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-2">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     His Holiness Jagadguru Sri Sri Shivarathri Deshikendra Mahaswamiji
@@ -23,8 +23,8 @@ export default function Committee() {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Dr. Vineet Kansal<br/>
@@ -35,8 +35,8 @@ export default function Committee() {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Dr. C.G Betsurmath<br />
@@ -47,8 +47,8 @@ export default function Committee() {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Prof. M. H. Dhananjaya,<br/>
@@ -59,8 +59,8 @@ export default function Committee() {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Dr. B. Suresh, Pro-Chancellor<br />
@@ -73,8 +73,8 @@ export default function Committee() {
 
 
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Dr. H R Mahadevaswamy<br />
@@ -85,8 +85,8 @@ export default function Committee() {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Dr. G. M. Patil<br />
@@ -97,8 +97,8 @@ export default function Committee() {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Mr. P.K. Mishra,<br />
@@ -112,8 +112,8 @@ export default function Committee() {
 
 
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Dr. Anand Kumar Pandey<br />
@@ -125,8 +125,8 @@ export default function Committee() {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Dr. Sanjiba Kumar Bisoyi<br />
@@ -138,8 +138,8 @@ export default function Committee() {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Dr. Arun Kumar G<br />
@@ -152,8 +152,8 @@ export default function Committee() {
 
 
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Dr. K. S. Sujatha<br />
@@ -165,8 +165,8 @@ export default function Committee() {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
-                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"300px"}}>
-                            <img className="img-fluid" src={I1} alt="Card image" />
+                        <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                            <img className="img-fluid" src={I1} alt="committee_img" />
                             <div className="card-body center mt-3">
                                 <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                     Dr. Sanjeev Kumar Sharma,<br />
