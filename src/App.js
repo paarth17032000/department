@@ -1,5 +1,5 @@
-import About from "./pages/About";
-import Committee from "./pages/Committee";
+// import About from "./pages/About";
+// import Committee from "./pages/Committee";
 import Contact from "./pages/Contact";
 import FeeDetails from "./pages/Fee";
 import Interests from "./pages/Interests";
@@ -11,9 +11,6 @@ function App() {
   return (
     <div className="App">
       <Landing />
-      <About />
-      <hr />
-      <Committee />
       <Interests />
       <Schedule />
       <FeeDetails />
