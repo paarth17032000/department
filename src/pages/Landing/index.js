@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import styles from './Landing.module.css'
@@ -19,38 +19,68 @@ import I10 from '../../assets/images/committee/10.png'
 import I11 from '../../assets/images/committee/11.png'
 import I12 from '../../assets/images/committee/12.png'
 import I13 from '../../assets/images/committee/13.png'
+import I14 from '../../assets/images/committee/14.png'
+import I15 from '../../assets/images/committee/15.png'
+import I16 from '../../assets/images/committee/16.png'
 
 export default function Landing() {
+    const [nav, setNav] = useState()
+    // const [color, setColor] = useState(styles.desk)
+    const [count, setCount] = useState(0)
+
+    const handleNav = () => {
+        window.scrollY > 0 ? setNav(styles.white_nav) : setNav(styles.nav)
+    }
+
+    window.addEventListener('scroll', handleNav)
+
+    const handleClick = () => {
+        console.log(count)
+        if(count === 0){
+            console.log(count, 'in 0')
+            setNav(styles.white_nav)
+            setCount(1)
+            
+        } else if(count === 1 || window.scrollY === 0) {
+            console.log(count, 'in 1')
+            setNav(styles.nav)
+            setCount(0)
+        }         
+    }
+
+    // 1207
+
     return (
         <>
             <div className={styles.landing}>
 
-                    <Navbar collapseOnSelect expand="lg" className={`${styles.nav} px-4`} >
+                    <Navbar collapseOnSelect fixed="top" expand="xl" className={nav} >
                             <Navbar.Brand href="#home" className="me-auto">
-                                <img src={JssLogo} alt="jss_logo" className="img-fluid px-3" />
-                                <img src={AktuLogo} alt="aktu_logo" className="img-fluid px-3" />
-                                <img src={IcLogo} alt="ic_logo" className="img-fluid px-3" />
+                                <img src={JssLogo} alt="jss_logo" className="img-fluid px-2" />
+                                <img src={AktuLogo} alt="aktu_logo" className="img-fluid px-2" />
+                                <img src={IcLogo} alt="ic_logo" className="img-fluid px-2" />
                             </Navbar.Brand>
-                            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                            <Navbar.Collapse id="responsive-navbar-nav">
+                            <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={handleClick} className="mx-3"/>
+                            <Navbar.Collapse id="responsive-navbar-nav" className="w-100">
                                 <Nav className="me-auto"></Nav>
-                                <Nav className="center">
-                                    <Nav.Link href="#home" className="font-barlow-medium font-14 text-white">HOME</Nav.Link>
-                                    <Nav.Link href="#about" className="font-barlow-medium font-14 text-white">ABOUT</Nav.Link>
-                                    <Nav.Link href="#committee" className="font-barlow-medium font-14 text-white">COMMITTEE</Nav.Link>
-                                    <Nav.Link href="#topics" className="font-barlow-medium font-14 text-white">TOPICS</Nav.Link>
-                                    <Nav.Link href="#schedule" className="font-barlow-medium font-14 text-white">SCHEDULE</Nav.Link>
-                                    <Nav.Link href="#fee" className="font-barlow-medium font-14 text-white">FEE DETAILS</Nav.Link>
-                                    <Nav.Link href="#contact" className="font-barlow-medium font-14 text-white">CONTACT US</Nav.Link>
-                                    <Nav.Link rel="noreferer" target="_blank" href="https://easychair.org/conferences/?conf=ncseves2021" >
+                                <Nav className="center text-white">
+                                    <Nav.Link href="#home" className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>HOME</Nav.Link>
+                                    <Nav.Link href="#about" className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>ABOUT</Nav.Link>
+                                    <Nav.Link href="#committee" className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>COMMITTEE</Nav.Link>
+                                    <Nav.Link href="#topics" className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>TOPICS</Nav.Link>
+                                    <Nav.Link href="#schedule" className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>SCHEDULE</Nav.Link>
+                                    <Nav.Link href="#fee" className={styles.link_style}><pre className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>FEE DETAILS</pre></Nav.Link>
+                                    <Nav.Link href="#contact" className={styles.link_style}><pre className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>CONTACT US</pre></Nav.Link>
+                                    <Nav.Link rel="noreferer" className={styles.link_style} target="_blank" href="https://easychair.org/conferences/?conf=ncseves2021" >
                                         <span className={`text-decoration-none ${styles.register_nav}`}>REGISTER</span>
                                     </Nav.Link>
+                                    <Nav.Link href="#" className={styles.link_style}><pre className="d-none"></pre></Nav.Link>
                                 </Nav>
                             </Navbar.Collapse>
                     </Navbar>
 
                 <div className={`d-flex flex-column align-items-center justify-content-center ${styles.main_content}`}>
-                    <div className="center">
+                    <div className="center mt-5">
                         <img src={Logo_106} alt="106_logo" className="img-fluid px-3" />
                         <p className="font-barlow-medium font-16 text-white text-center">
                             In Commemoration of
@@ -278,6 +308,42 @@ export default function Landing() {
                                 </div>
                             </div>
                         </div>
+                        <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
+                            <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                                <img className="img-fluid" src={I14} alt="committee_img" />
+                                <div className="card-body center mt-3">
+                                    <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
+                                        Dr. Chhaya Dalela,<br />
+                                        ECE, JSSATE, NOIDA
+                                    </p>
+                                    <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Associate Professor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
+                            <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                                <img className="img-fluid" src={I15} alt="committee_img" />
+                                <div className="card-body center mt-3">
+                                    <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
+                                        Dr. Anand Kumar Pandey,<br />
+                                        EEE, JSSATE, NOIDA
+                                    </p>
+                                    <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Associate Professor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-sm-12 col-12 center mt-5">
+                            <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"280px", height: "350px"}}>
+                                <img className="img-fluid" src={I16} alt="committee_img" />
+                                <div className="card-body center mt-3">
+                                    <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
+                                        Dr. Sanjiba Kumar Bisoyi,<br />
+                                        EE, JSSATE, NOIDA
+                                    </p>
+                                    <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Associate Professor</p>
+                                </div>
+                            </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
