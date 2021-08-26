@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import { Table } from "react-bootstrap";
 import styles from './Landing.module.css'
 import JssLogo from '../../assets/images/JSS_Logo.png'
 import AktuLogo from '../../assets/images/logo/AKTU.png'
@@ -25,7 +26,6 @@ import I16 from '../../assets/images/committee/16.png'
 
 export default function Landing() {
     const [nav, setNav] = useState()
-    // const [color, setColor] = useState(styles.desk)
     const [count, setCount] = useState(0)
 
     const handleNav = () => {
@@ -47,8 +47,6 @@ export default function Landing() {
             setCount(0)
         }         
     }
-
-    // 1207
 
     return (
         <>
@@ -348,6 +346,172 @@ export default function Landing() {
                 </div>
             </div>
 
+            <div id="topics" className={`${styles.interests} p-100 px-4 bg-secondaryColor`}>
+                <div className="h-100">
+                    <div className="font-bebas-regular font-36 text-white text-center pt-5">TOPIC OF INTERESTS</div>
+                    <div className="row mt-3 line-height-33 font-barlow-medium font-18">
+                        <div className="col-xl-2 col-12"></div>
+                        <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 my-2">
+                            <ul>
+                                <li>Resilient/Adaptive Grid Infrastructures Design</li>
+                                <li>Demand Response</li>
+                                <li>Planning, Operation and Management.</li>
+                                <li>Resilient Control Architectures &amp; Systems for Smart Energy Systems</li>
+                                <li>Electrical Machines and Industrial Drives</li>
+                                <li>Smart Homes, Buildings and Cities</li>
+                                <li>Power Electronics Converters</li>
+                                <li>Energy Storage Technologies and Systems</li>
+                                <li>Transportation Electrification and Electric Vehicles</li>
+                                <li>Computational Intelligence &amp; Optimization for Smart Energy Systems</li>
+                                <li>Smart Metering, Measurement, Instrumentation, And Control</li>
+                                <li>Information, Security and Privacy for Smart Energy Systems</li>
+                                <li>Energy Efficiency</li>
+                                <li>Sensors, Communications and Network</li>
+                            </ul>
+                        </div>
+                        <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 my-2">
+                            <ul>
+                                <li>FACTS, Active Power Filters, Power Quality Monitoring &amp; Performance</li>
+                                <li>Enhancement</li>
+                                <li>VLSI Design</li>
+                                <li>Computer-Aided Design (CAD)</li>
+                                <li>Low Power Design</li>
+                                <li>VLSI Testing</li>
+                                <li>Applications of VLSI in Communications,signal processing &amp; Sensor</li>
+                                <li>Networks,</li>
+                                <li>Renewable Energy  Distributed Generation Within Microgrids</li>
+                                <li>Embedded System Design and IoT</li>
+                                <li>Embedded computing education</li>
+                                <li>Real-time systems.</li>
+                                <li>Digital Integrated Circuits and Systems</li>
+                                <li>Analog and Mixed-Signal and RF Circuit design</li>
+                            </ul>
+                        </div>
+                        <div className="col-xl-2 col-12"></div>
+                        <div className="col-12 mb-3 font-barlow-medium font-16 text-primaryColor text-center text">
+                            &amp; much more..
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="schedule" className={`${styles.schedule} p-75`}>
+                <div className="container d-flex flex-column justify-content-around align-items-center">
+                    <div className="font-bebas-regular font-36 text-secondaryColor">Schedule &amp; Important Dates</div>
+
+                    <div className="mt-5 w-75">
+                        <Table responsive="sm" className="mt-3 bg-tertiaryColor">
+                            <tbody className="text-primaryColor text-center">
+                                <tr className={`font-barlow-semi-bold font-24 bg-secondaryColor ${styles.border_bottom_background}`}>
+                                    <th><span>DATE</span></th>
+                                    <th>EVENTS</th>
+                                </tr>
+                                <tr className={`${styles.bg_odd} ${styles.border_bottom_background}`}>
+                                    <td><pre><span className="font-barlow-semi-bold font-18">15 AUG 2021</span></pre></td>
+                                    <td className="font-barlow-medium font-18">Call for papers</td>
+                                </tr>
+                                <tr className={`${styles.bg_even} ${styles.border_bottom_background} `}>
+                                    <td><pre><span className="font-barlow-semi-bold font-18">31 AUG 2021</span></pre></td>
+                                    <td className="font-barlow-medium font-18">Paper Submission Deadline</td>
+                                </tr>
+                                <tr className={`${styles.bg_odd} ${styles.border_bottom_background} `}>
+                                    <td><pre><span className="font-barlow-semi-bold font-18">10 SEPT 2021</span></pre></td>
+                                    <td className="font-barlow-medium font-18">Notification of Acceptance</td>
+                                </tr>
+                                <tr className={`${styles.bg_even} ${styles.border_bottom_background} `}>
+                                    <td><pre><span className="font-barlow-semi-bold font-18">15 SEPT 2021</span></pre></td>
+                                    <td className="font-barlow-medium font-18">Camera ready paper</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </div>
+                </div>
+            </div>
+        
+
+            <div id="fee" className={`${styles.fee} p-75 bg-secondaryColor`}>
+                <div className="container-fluid">
+                    <div className="font-bebas-regular font-36 text-white text-center">FEE DETAILS</div>
+                    <div className="row mx-5 mt-5">
+                        <div className={`col-md-6 col-sm-12 col-12 mt-5 ${styles.fee_grid}`}>
+                            <div>
+                                <div className="font-barlow-semi-bold font-20 text-tertiaryColor">Participation Certificate</div>
+                                <div>
+                                    <p className="font-barlow-semi-bold font-24 text-primaryColor">Rs. 500/-</p>
+                                    <p className="font-barlow-medium font-18 text-primaryColor">
+                                        Individual (Student/ Research Scholar/ <br />academician/ Industry Person)
+                                    </p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <p className="font-barlow-semi-bold font-24 text-primaryColor">Rs. 2000/-</p>
+                                        <p className="font-barlow-medium font-18 text-primaryColor">Delegate (Maximum 5 members)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mt-5">
+                                <div className="font-barlow-semi-bold font-20 text-tertiaryColor">Paper Presentation</div>
+                                <div>
+                                    <p className="font-barlow-semi-bold font-24 text-primaryColor">Rs. 1000/-</p>
+                                    <p className="font-barlow-medium font-18 text-primaryColor">
+                                    Author (Student/ Research Scholar/ <br />academician/ Industry Person)
+                                    </p>
+                                </div>
+                                <div>
+                                    <div>
+                                        <p className="font-barlow-semi-bold font-24 text-primaryColor">Rs. 2000/-</p>
+                                        <p className="font-barlow-medium font-18 text-primaryColor">Industry personnel</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                        <div className="col-md-1 col-sm-12 col-12 mt-5"></div>
+                        <div className="col-md-5 col-sm-12 col-12 mt-5 bg-white">
+                            <div className="font-barlow-semi-bold font-20 text-tertiaryColor mt-3 text-center">MODE OF PAYMENT</div>
+                            <div className={styles.hr}></div>
+                            <ol className="mt-4 line-height-33">
+                                <li className="font-barlow-medium font-18 text-primaryColor px-1">DD drawn in favor of “Construction Industry Development Council” payable at New Delhi.</li>
+                                <li className="font-barlow-medium font-18 text-primaryColor px-1">NEFT transfer: A/c-13810100093936, The Federal Bank Limited, Nehru Place, New Delhi-110019</li>
+                                <li className="font-barlow-medium font-18 text-primaryColor px-1">IFSC Code: FDRL0001302</li>
+                                <li className="font-barlow-medium font-18 text-primaryColor px-1">You can check further submission guidelines at --</li>
+                                <a href="www.jssaten.ac.in/ncses2019" className="text-secondaryColor">www.jssaten.ac.in/ncses2019</a>
+                                <li className="font-barlow-medium font-18 text-primaryColor px-1">Authors should submit their manuscripts through mail:
+                                <span className="text-secondaryColor text-decoration-underline">conference@jssaten.ac.in</span></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="contact" className={`${styles.contact} p-75`}>
+                <div className="container-fluid">
+                    <div className="font-bebas-regular font-36 text-secondaryColor text-center">CONTACT US</div>
+                    <div className="row mt-5 mx-5 text-center">
+                        <div className="col-lg-4 col-md-6 col-sm-12 col-12 mt-4 center">
+                            <div className={`w-100 ${styles.border_left_contact} px-3 `}>
+                                <div><pre className={`font-barlow-medium font-18 text-primaryColor`}>Dr. Chhaya Dalela</pre></div>
+                                <div className="font=barlow-semi-bold font-20 text-secondaryColor">+91 9873552765</div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-sm-12 col-12 mt-4 center">
+                            <div className={`w-100 ${styles.border_left_contact} px-3 `}>
+                                <div><pre className={`font-barlow-medium font-18 text-primaryColor`}>Dr. Anand Kumar Pandey</pre></div>
+                                <div className="font=barlow-semi-bold font-20 text-secondaryColor">+91 9625379602</div>
+                            </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-sm-12 col-12 mt-4 center">
+                            <div className={`w-100 ${styles.border_left_contact} px-3 `}>
+                                <div><pre className={`font-barlow-medium font-18 text-primaryColor`}>Dr. Sanjiba Kumar Bisoyi</pre></div>
+                                <div className="font=barlow-semi-bold font-20 text-secondaryColor text-center">+91 9891021959</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        
         </>
     )
 }
