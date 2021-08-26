@@ -29,6 +29,10 @@
     transform: translate(-50%,-50%);
 }
 
+.m_10 {
+    margin: 0 20%;
+}
+
 /* navbar */
 .nav{
     height: 85px;
@@ -58,9 +62,25 @@
     color: #FFFFFF;
 }
 
+@media screen and (max-width:1572px) {
+    .m_10 {
+        margin: 0 12%;
+    }   
+}
+
+@media screen and (max-width:1200px) {
+    .m_10 {
+        margin: 0 7%;
+    }   
+}
+
+
 @media screen and (max-width:772px) {
     .register_nav{
         display: none;
+    }
+    .m_10 {
+        
     }
     /* .navbar{
         display: block;

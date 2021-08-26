@@ -108,9 +108,9 @@ export default function Landing() {
             <hr />
 
             <div id="committee" className={`${styles.committee} p-75`}>
-                <div className="container d-flex flex-column justify-content-around align-items-center">
+                <div className="container-fluid d-flex flex-column justify-content-around align-items-center">
                     <div className="font-bebas-regular font-36 text-secondaryColor">COMMITTEE</div>
-                    <div className="row mt-5 mx-5">
+                    <div className={`row mt-5 ${styles.m_10}`}>
                         <div className="col-12 center">
                             <div className={`${styles.card} card center border-0 px-4 py-4`} style={{width:"400px"}}>
                                 <img className="img-fluid" src={I1} alt="committee_img" />
