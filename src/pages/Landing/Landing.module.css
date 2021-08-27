@@ -12,6 +12,10 @@
     min-height: 75vh;
 }
 
+.text_justify {
+    text-align: justify;
+}
+
 /* committee */
 .committee{
     width: 100%;

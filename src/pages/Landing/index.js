@@ -28,6 +28,7 @@ import I16 from '../../assets/images/committee/16.png'
 import {GoLocation} from 'react-icons/go'
 import {BiPhone} from 'react-icons/bi'
 import {BiGlobe} from 'react-icons/bi'
+import {AiOutlineClose} from 'react-icons/ai'
 
 export default function Landing() {
     const [nav, setNav] = useState()
@@ -126,7 +127,7 @@ export default function Landing() {
             <div  id="about" className={`${styles.about} p-75`}>
                 <div className="container d-flex flex-column justify-content-around align-items-center">
                     <div className="font-bebas-regular font-36 text-secondaryColor">ABOUT CONFERENCE</div>
-                    <div className="font-barlow-medium font-24 text-primaryColor text-center line-height-33 mt-5 px-5">
+                    <div className={`font-barlow-medium font-24 text-primaryColor line-height-33 mt-5 px-5 ${styles.text_justify}`}>
                         The conference is aimed to gather scientists, engineers,
                         academicians and industry personnel to discuss latest developments
                         in Smart Energy, VLSI &amp; Embedded Systems. Smart Energy Systems
@@ -163,7 +164,6 @@ export default function Landing() {
                                     <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                         His Holiness Jagadguru Sri Sri Shivarathri Deshikendra Mahaswamiji
                                         President, JSS Mahavidyapeetha, Mysuru
-                                        Some example text.
                                     </p>
                                     <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Chief Patron</p>
                                 </div>
@@ -199,7 +199,7 @@ export default function Landing() {
                                 <div className="card-body center mt-3">
                                     <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                         Prof. M. H. Dhananjaya,<br/>
-                                        Advisor JSSMVP, Mysuru
+                                        Advisor , JSSMVP, Mysuru
                                     </p>
                                     <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Patron</p>
                                 </div>
@@ -211,7 +211,7 @@ export default function Landing() {
                                 <div className="card-body center mt-3">
                                     <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                         Dr. B. Suresh, Pro-Chancellor<br />
-                                        JSS AHER -JSSMVP, Mysuru
+                                        JSS AHER ,JSSMVP, Mysuru
                                     </p>
                                     <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Patron</p>
                                 </div>
@@ -499,11 +499,16 @@ export default function Landing() {
                                 </ol>
                             </div>
                             <div className="bg-white px-4 py-3 text-wrap mt-2">
-                                <div  onClick={handleShow} className={`font-barlow-semi-bold font-20 text-secondaryColor ${styles.pointer}`}>Authors Guidelines</div>
-
+                                <div onClick={handleShow}>
+                                    <div className={`font-barlow-semi-bold font-20 text-secondaryColor ${styles.pointer}`}>Authors Guidelines</div>
+                                </div>
                                 <Modal show={show} onHide={handleClose}>
-                                    <Modal.Header className="center" closeButton={false}>
+                                    <Modal.Header className="d-flex flex-column">
+                                        <div className="d-flex justify-content-end w-100">
+                                            <AiOutlineClose onClick={handleClose} className={`font-30 text-secondaryColor ${styles.pointer}`}/>
+                                        </div>
                                         <Modal.Title className="font-bebas-regular font-36 text-secondaryColor t">Authors Guidlines</Modal.Title>
+                                        
                                     </Modal.Header>
                                     <Modal.Body>
                                         <ol>
