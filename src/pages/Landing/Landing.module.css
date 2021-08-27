@@ -42,7 +42,7 @@
 }
 
 .bg_even{
-    background-color: rgba(254, 157, 108, 0.24) !important;
+    background-color: rgba(254, 157, 108, 0.34) !important;
 }
 
 .border_bottom_background {
@@ -61,6 +61,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+.tertiary_color {
+    color: #C74B0D
 }
 
 /* contact */
@@ -90,8 +94,8 @@
 .white_nav {
     height: 85px;
     background-color: #FFFFFF;
+    color: black !important;
     box-shadow: 0 5x 25px rgba(0, 0, 0, 0.2);
-    color: #421600;
 }
 
 /* .white_nav >  */
@@ -128,6 +132,10 @@
     color: #FFFFFF !important;
 }
 
+.link_style_black {
+    color: A0A0A0 !important;
+}
+
 .hr {
     padding-bottom: 10px;
     border-bottom: 2px solid rgba(254, 157, 108, 0.5) !important;
@@ -143,11 +151,11 @@
     .m_10 {
         margin: 0 7%;
     }   
-    .link_style {
+    .link_style, .link_style_black {
         width: 100%;
         text-align: center;
         background-color: #FFFFFF;
-        color: black !important;
+        color: A0A0A0 !important;
     }
 }
 

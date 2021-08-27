@@ -14,7 +14,7 @@ body {
 :root {
   --primaryColor: #421600;
   --secondaryColor: #FF9375;
-  --tertiaryColor: #C74B0D;
+  /* --tertiaryColor: #C74B0D; */
 }
 ::-webkit-scrollbar {
   width: 5px;

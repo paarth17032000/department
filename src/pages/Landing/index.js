@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar'
 import { Table } from "react-bootstrap";
 import styles from './Landing.module.css'
 import JssLogo from '../../assets/images/JSS_Logo.png'
+import JssLogo1 from '../../assets/images/logo/JSS_Logo.png'
 import AktuLogo from '../../assets/images/logo/AKTU.png'
 import IcLogo from '../../assets/images/logo/IC.png'
 import Logo_106 from '../../assets/images/logo/106_logo.png'
@@ -23,13 +24,23 @@ import I13 from '../../assets/images/committee/13.png'
 import I14 from '../../assets/images/committee/14.png'
 import I15 from '../../assets/images/committee/15.png'
 import I16 from '../../assets/images/committee/16.png'
+import {GoLocation} from 'react-icons/go'
+import {BiPhone} from 'react-icons/bi'
+import {BiGlobe} from 'react-icons/bi'
 
 export default function Landing() {
     const [nav, setNav] = useState()
+    const [color, setColor] = useState(styles.link_style)
     const [count, setCount] = useState(0)
 
     const handleNav = () => {
-        window.scrollY > 0 ? setNav(styles.white_nav) : setNav(styles.nav)
+        if(window.scrollY > 0){
+             setNav(styles.white_nav)
+             setColor(styles.link_style_black)
+        } else {
+            setNav(styles.nav)
+            setColor(styles.link_style)
+        }
     }
 
     window.addEventListener('scroll', handleNav)
@@ -39,6 +50,7 @@ export default function Landing() {
         if(count === 0){
             console.log(count, 'in 0')
             setNav(styles.white_nav)
+            setColor(styles.link_style_black)
             setCount(1)
             
         } else if(count === 1 || window.scrollY === 0) {
@@ -61,23 +73,23 @@ export default function Landing() {
                             <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={handleClick} className="mx-3"/>
                             <Navbar.Collapse id="responsive-navbar-nav" className="w-100">
                                 <Nav className="me-auto"></Nav>
-                                <Nav className="center text-white">
-                                    <Nav.Link href="#home" className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>HOME</Nav.Link>
-                                    <Nav.Link href="#about" className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>ABOUT</Nav.Link>
-                                    <Nav.Link href="#committee" className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>COMMITTEE</Nav.Link>
-                                    <Nav.Link href="#topics" className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>TOPICS</Nav.Link>
-                                    <Nav.Link href="#schedule" className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>SCHEDULE</Nav.Link>
-                                    <Nav.Link href="#fee" className={styles.link_style}><pre className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>FEE DETAILS</pre></Nav.Link>
-                                    <Nav.Link href="#contact" className={styles.link_style}><pre className={`${styles.link_style} font-barlow-medium font-16 mx-1`}>CONTACT US</pre></Nav.Link>
-                                    <Nav.Link rel="noreferer" className={styles.link_style} target="_blank" href="https://easychair.org/conferences/?conf=ncseves2021" >
+                                <Nav className="center">
+                                    <Nav.Link href="#home" className={`${color} font-barlow-medium font-16 mx-1`}>HOME</Nav.Link>
+                                    <Nav.Link href="#about" className={`${color} font-barlow-medium font-16 mx-1`}>ABOUT</Nav.Link>
+                                    <Nav.Link href="#committee" className={`${color} font-barlow-medium font-16 mx-1`}>COMMITTEE</Nav.Link>
+                                    <Nav.Link href="#topics" className={`${color} font-barlow-medium font-16 mx-1`}>TOPICS</Nav.Link>
+                                    <Nav.Link href="#schedule" className={`${color} font-barlow-medium font-16 mx-1`}>SCHEDULE</Nav.Link>
+                                    <Nav.Link href="#fee" className={color}><pre className={`${color} font-barlow-medium font-16 mx-1`}>FEE DETAILS</pre></Nav.Link>
+                                    <Nav.Link href="#contact" className={color}><pre className={`${color} font-barlow-medium font-16 mx-1`}>CONTACT US</pre></Nav.Link>
+                                    <Nav.Link rel="noreferer" className={color} target="_blank" href="https://easychair.org/conferences/?conf=ncseves2021" >
                                         <span className={`text-decoration-none ${styles.register_nav}`}>REGISTER</span>
                                     </Nav.Link>
-                                    <Nav.Link href="#" className={styles.link_style}><pre className="d-none"></pre></Nav.Link>
+                                    <Nav.Link href="#" className={color}><pre className="d-none"></pre></Nav.Link>
                                 </Nav>
                             </Navbar.Collapse>
                     </Navbar>
 
-                <div className={`d-flex flex-column align-items-center justify-content-center ${styles.main_content}`}>
+                <div id="home" className={`d-flex flex-column align-items-center justify-content-center ${styles.main_content}`}>
                     <div className="center mt-5">
                         <img src={Logo_106} alt="106_logo" className="img-fluid px-3" />
                         <p className="font-barlow-medium font-16 text-white text-center">
@@ -259,9 +271,8 @@ export default function Landing() {
                                 <img className="img-fluid" src={I10} alt="committee_img" />
                                 <div className="card-body center mt-3">
                                     <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
-                                        Dr. Sanjiba Kumar Bisoyi<br />
-                                        Associate Prof.,
-                                        EE, JSSATE, NOIDA
+                                        Dr. R. N. Khare,<br />
+                                        Principal, VEC, Lakhanpur
                                     </p>
                                     <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">General Co-Chair</p>
                                 </div>
@@ -412,7 +423,7 @@ export default function Landing() {
                                     <td className="font-barlow-medium font-18">Call for papers</td>
                                 </tr>
                                 <tr className={`${styles.bg_even} ${styles.border_bottom_background} `}>
-                                    <td><pre><span className="font-barlow-semi-bold font-18">31 AUG 2021</span></pre></td>
+                                    <td><pre><span className="font-barlow-semi-bold font-18">5 SEPT 2021</span></pre></td>
                                     <td className="font-barlow-medium font-18">Paper Submission Deadline</td>
                                 </tr>
                                 <tr className={`${styles.bg_odd} ${styles.border_bottom_background} `}>
@@ -436,7 +447,7 @@ export default function Landing() {
                     <div className="row mx-5 mt-5">
                         <div className={`col-md-6 col-sm-12 col-12 mt-5 ${styles.fee_grid}`}>
                             <div>
-                                <div className="font-barlow-semi-bold font-20 text-tertiaryColor">Participation Certificate</div>
+                                <div className={`font-barlow-semi-bold font-20 ${styles.tertiary_color}`}>Participation Certificate</div>
                                 <div>
                                     <p className="font-barlow-semi-bold font-24 text-primaryColor">Rs. 500/-</p>
                                     <p className="font-barlow-medium font-18 text-primaryColor">
@@ -451,7 +462,7 @@ export default function Landing() {
                                 </div>
                             </div>
                             <div className="mt-5">
-                                <div className="font-barlow-semi-bold font-20 text-tertiaryColor">Paper Presentation</div>
+                                <div className={`font-barlow-semi-bold font-20 ${styles.tertiary_color}`}>Paper Presentation</div>
                                 <div>
                                     <p className="font-barlow-semi-bold font-24 text-primaryColor">Rs. 1000/-</p>
                                     <p className="font-barlow-medium font-18 text-primaryColor">
@@ -469,7 +480,7 @@ export default function Landing() {
                         </div>
                         <div className="col-md-1 col-sm-12 col-12 mt-5"></div>
                         <div className="col-md-5 col-sm-12 col-12 mt-5 bg-white">
-                            <div className="font-barlow-semi-bold font-20 text-tertiaryColor mt-3 text-center">MODE OF PAYMENT</div>
+                            <div className={` ${styles.tertiary_color} font-barlow-semi-bold font-20 mt-3 text-center`}>MODE OF PAYMENT</div>
                             <div className={styles.hr}></div>
                             <ol className="mt-4 line-height-33">
                                 <li className="font-barlow-medium font-18 text-primaryColor px-1">DD drawn in favor of “Construction Industry Development Council” payable at New Delhi.</li>
@@ -511,7 +522,43 @@ export default function Landing() {
                 </div>
             </div>
         
-        
+            <footer className="p-25 bg-dark">
+                <div className="container">
+                    <div className="d-flex">
+                        <div>
+                            <img src={JssLogo1} alt="jss_logo" className="img-fluid px-3" />
+                        </div>
+                        <div className="d-flex flex-column">
+                            <div className="font-bebas-regular font-24 text-secondaryColor">JSS Academy of Technical Education, Noida</div>
+                            <div>
+                                <div className="text-white d-flex align-items-baseline">
+                                    <span><GoLocation  className="font-16 text-secondaryColor"/></span>
+                                    <span className="font=barlow-medium font-18 text-white px-3">C-20/1, SECTOR-62, NOIDA-201301</span>
+                                </div>
+                                <div className="text-white d-flex align-items-baseline">
+                                    <span><BiPhone  className="font-16 text-secondaryColor"/></span>
+                                    <span className="font=barlow-medium font-18 text-white px-3">Phone: +91-120-2400115</span>
+                                </div>
+                                <div className="text-white d-flex align-items-baseline">
+                                    <span><BiGlobe  className="font-16 text-secondaryColor"/></span>
+                                    <span className="font=barlow-medium font-18 text-white px-3">www.jssaten.ac.in</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="center mt-4">
+                        <hr className="text-white w-75"/>
+                    </div>
+                    <div className="center">
+                        <div className="font-barlow-medium font-16 text-white">
+                            Made with&nbsp; ❤ by &nbsp;
+                            <a href="https://www.github.com/paarth17032000" className="text-secondaryColor">Shrey Jain </a>
+                            &nbsp;&nbsp;&amp;&nbsp;&nbsp; 
+                            <a href="https://www.github.com/paarth17032000" className="text-secondaryColor">Paarth Agarwal</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </>
     )
 }
