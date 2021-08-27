@@ -318,3 +318,8 @@ ul li{
   color: var(--primaryColor);
   margin-top: 10px;
 }
+
+ol li{
+  font-family: Barlow-medium;
+  color: var(--primaryColor);
+}

@@ -67,6 +67,10 @@
     color: #C74B0D
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 /* contact */
 .contact{
     width: 100%;

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import { Table } from "react-bootstrap";
+import Modal from 'react-bootstrap/Modal'
 import styles from './Landing.module.css'
 import JssLogo from '../../assets/images/JSS_Logo.png'
 import JssLogo1 from '../../assets/images/logo/JSS_Logo.png'
@@ -32,6 +33,10 @@ export default function Landing() {
     const [nav, setNav] = useState()
     const [color, setColor] = useState(styles.link_style)
     const [count, setCount] = useState(0)
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const handleNav = () => {
         if(window.scrollY > 0){
@@ -121,7 +126,7 @@ export default function Landing() {
             <div  id="about" className={`${styles.about} p-75`}>
                 <div className="container d-flex flex-column justify-content-around align-items-center">
                     <div className="font-bebas-regular font-36 text-secondaryColor">ABOUT CONFERENCE</div>
-                    <div className="font-barlow-medium font-24 text-primaryColor line-height-33 mt-5 px-5">
+                    <div className="font-barlow-medium font-24 text-primaryColor text-center line-height-33 mt-5 px-5">
                         The conference is aimed to gather scientists, engineers,
                         academicians and industry personnel to discuss latest developments
                         in Smart Energy, VLSI &amp; Embedded Systems. Smart Energy Systems
@@ -258,9 +263,8 @@ export default function Landing() {
                                 <img className="img-fluid" src={I9} alt="committee_img" />
                                 <div className="card-body center mt-3">
                                     <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
-                                        Dr. Anand Kumar Pandey<br />
-                                        Assistant Prof.,
-                                        EEE, JSSATE, NOIDA
+                                        Ajit Kumar Mishra<br />
+                                        Chief Project Manager,DFCCIL 
                                     </p>
                                     <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">General Co-Chair</p>
                                 </div>
@@ -298,7 +302,7 @@ export default function Landing() {
                                 <div className="card-body center mt-3">
                                     <p className="font-barlow-medium font-16 text-primaryColor text-center line-height-33">
                                         Dr. K. S. Sujatha<br />
-                                        HOD EEE &mp;a Dean R&amp;D,
+                                        HOD EEE &amp; Dean R&amp;D,
                                         JSSATE, NOIDA
                                     </p>
                                     <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Convener</p>
@@ -325,7 +329,7 @@ export default function Landing() {
                                         Dr. Chhaya Dalela,<br />
                                         ECE, JSSATE, NOIDA
                                     </p>
-                                    <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Associate Professor</p>
+                                    <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Co-Convener</p>
                                 </div>
                             </div>
                         </div>
@@ -337,7 +341,7 @@ export default function Landing() {
                                         Dr. Anand Kumar Pandey,<br />
                                         EEE, JSSATE, NOIDA
                                     </p>
-                                    <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Associate Professor</p>
+                                    <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Co-Convener</p>
                                 </div>
                             </div>
                         </div>
@@ -349,7 +353,7 @@ export default function Landing() {
                                         Dr. Sanjiba Kumar Bisoyi,<br />
                                         EE, JSSATE, NOIDA
                                     </p>
-                                    <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Associate Professor</p>
+                                    <p className="font-barlow-regular font-14 text-primaryColor-low text-decoration-underline mt-2">Co-Convener</p>
                                 </div>
                             </div>
                         </div>                        
@@ -444,8 +448,9 @@ export default function Landing() {
             <div id="fee" className={`${styles.fee} p-75 bg-secondaryColor`}>
                 <div className="container-fluid">
                     <div className="font-bebas-regular font-36 text-white text-center">FEE DETAILS</div>
-                    <div className="row mx-5 mt-5">
-                        <div className={`col-md-6 col-sm-12 col-12 mt-5 ${styles.fee_grid}`}>
+                    <div className="row mx-4 mt-5">
+                        <div className="col-md-1 col-sm-12 col-12 mt-5"></div>
+                        <div className={`col-md-5 col-sm-12 col-12 mt-5 ${styles.fee_grid}`}>
                             <div>
                                 <div className={`font-barlow-semi-bold font-20 ${styles.tertiary_color}`}>Participation Certificate</div>
                                 <div>
@@ -479,27 +484,55 @@ export default function Landing() {
                             <div></div>
                         </div>
                         <div className="col-md-1 col-sm-12 col-12 mt-5"></div>
-                        <div className="col-md-5 col-sm-12 col-12 mt-5 bg-white">
-                            <div className={` ${styles.tertiary_color} font-barlow-semi-bold font-20 mt-3 text-center`}>MODE OF PAYMENT</div>
-                            <div className={styles.hr}></div>
-                            <ol className="mt-4 line-height-33">
-                                <li className="font-barlow-medium font-18 text-primaryColor px-1">DD drawn in favor of “Construction Industry Development Council” payable at New Delhi.</li>
-                                <li className="font-barlow-medium font-18 text-primaryColor px-1">NEFT transfer: A/c-13810100093936, The Federal Bank Limited, Nehru Place, New Delhi-110019</li>
-                                <li className="font-barlow-medium font-18 text-primaryColor px-1">IFSC Code: FDRL0001302</li>
-                                <li className="font-barlow-medium font-18 text-primaryColor px-1">You can check further submission guidelines at --</li>
-                                <a href="www.jssaten.ac.in/ncses2019" className="text-secondaryColor">www.jssaten.ac.in/ncses2019</a>
-                                <li className="font-barlow-medium font-18 text-primaryColor px-1">Authors should submit their manuscripts through mail:
-                                <span className="text-secondaryColor text-decoration-underline">conference@jssaten.ac.in</span></li>
-                            </ol>
+                        <div className="col-md-5 col-sm-12 col-12 mt-5">
+                            <div className="bg-white px-1 py-3 text-wrap">
+                                <div className={` ${styles.tertiary_color} font-barlow-semi-bold font-20 mt-1 text-center`}>MODE OF PAYMENT</div>
+                                <div className={styles.hr}></div>
+                                <ol className="mt-4 line-height-33">
+                                    <li className="font-barlow-medium font-16 text-primaryColor ">DD drawn in favor of “Construction Industry Development Council” payable at New Delhi.</li>
+                                    <li className="font-barlow-medium font-16 text-primaryColor ">NEFT transfer: A/c-13810100093936, The Federal Bank Limited, Nehru Place, New Delhi-110019</li>
+                                    <li className="font-barlow-medium font-16 text-primaryColor ">IFSC Code: FDRL0001302</li>
+                                    <li className="font-barlow-medium font-16 text-primaryColor ">You can check further submission guidelines at --</li>
+                                    <a href="www.jssaten.ac.in/ncses2019" className="text-secondaryColor">www.jssaten.ac.in/ncses2019</a>
+                                    <li className="font-barlow-medium font-16 text-primaryColor">Authors should submit their manuscripts through mail:
+                                    <span className="text-secondaryColor text-decoration-underline">conference@jssaten.ac.in</span></li>
+                                </ol>
+                            </div>
+                            <div className="bg-white px-4 py-3 text-wrap mt-2">
+                                <div  onClick={handleShow} className={`font-barlow-semi-bold font-20 text-secondaryColor ${styles.pointer}`}>Authors Guidelines</div>
+
+                                <Modal show={show} onHide={handleClose}>
+                                    <Modal.Header className="center" closeButton={false}>
+                                        <Modal.Title className="font-bebas-regular font-36 text-secondaryColor t">Authors Guidlines</Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <ol>
+                                            <li>Submissions should strictly follow the IEEE Template.</li>
+                                            <li>The submitted papers will be scrutinized through a <strong>blind review</strong> process. </li>
+                                            <li>Do not put page numbers in the manuscript.</li>
+                                            <li>Authors are instructed to submit their paper via <strong>easy chair submission</strong> system. Authors need to upload the details of all co-authors on the <a href="https://ncseves2021jssaten.netlify.app/" className="text-secondaryColor">https://ncseves2021jssaten.netlify.app/</a> portal in the same order as they appear in the paper. Failing so may lead to rejection of the paper.</li>
+                                            <li>The conference will adhere to accepted stringent norms as regards plagiarism. Authors are advised to use standard software’s to check similarity prior to loading their work. Rejection of submission without review can be based on high similarity. The maximum similarity allowed is less than or equal to 20% only.</li>
+                                            <li>All analysis on the basis graphs etc. should be supported with data computed through analytical work or based on experimental results. Any ambiguity on the data analyzed to be accepted will be at the discretion of reviewers. Reviewer(s) may recommend for major revision or reject the paper.</li>
+                                            <li>In case of major revision, the revised paper must be supported with a compliance report. Compliance report must highlight the original submission and the revised re submission.</li>
+                                            <li>No author can be added/ removed once the submitted paper is accepted.</li>
+                                            <li>Only registered author will be allowed to present the paper and certificate of presentation will be given to registered author only.</li>
+                                            <li>The preferred length of paper is 6 pages strictly in IEEE format.</li>
+                                            <li>Authors are required to use their official email-ID wherever possible.</li>
+                                            <li>Papers submitted to <strong>NCSEVES-2021</strong> should not have been submitted to any other conference or journal.</li>
+                                        </ol>
+                                    </Modal.Body>
+                                </Modal>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
             
-            <div id="contact" className={`${styles.contact} p-75`}>
+            <div id="contact" className={`p-75`}>
                 <div className="container-fluid">
                     <div className="font-bebas-regular font-36 text-secondaryColor text-center">CONTACT US</div>
-                    <div className="row mt-5 mx-5 text-center">
+                    <div className="row mt-4 mx-4 text-center">
                         <div className="col-lg-4 col-md-6 col-sm-12 col-12 mt-4 center">
                             <div className={`w-100 ${styles.border_left_contact} px-3 `}>
                                 <div><pre className={`font-barlow-medium font-18 text-primaryColor`}>Dr. Chhaya Dalela</pre></div>
@@ -522,7 +555,7 @@ export default function Landing() {
                 </div>
             </div>
         
-            <footer className="p-25 bg-dark">
+            <footer className="p-50 bg-dark">
                 <div className="container">
                     <div className="d-flex">
                         <div>
@@ -552,7 +585,7 @@ export default function Landing() {
                     <div className="center">
                         <div className="font-barlow-medium font-16 text-white">
                             Made with&nbsp; ❤ by &nbsp;
-                            <a href="https://www.github.com/paarth17032000" className="text-secondaryColor">Shrey Jain </a>
+                            <a href="https://www.linkedin.com/in/shrey-jain-3587161a1/" className="text-secondaryColor">Shrey Jain </a>
                             &nbsp;&nbsp;&amp;&nbsp;&nbsp; 
                             <a href="https://www.github.com/paarth17032000" className="text-secondaryColor">Paarth Agarwal</a>
                         </div>
