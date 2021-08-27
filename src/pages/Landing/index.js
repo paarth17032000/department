@@ -29,6 +29,7 @@ import {GoLocation} from 'react-icons/go'
 import {BiPhone} from 'react-icons/bi'
 import {BiGlobe} from 'react-icons/bi'
 import {AiOutlineClose} from 'react-icons/ai'
+import {AiOutlineArrowRight} from 'react-icons/ai'
 
 export default function Landing() {
     const [nav, setNav] = useState()
@@ -499,8 +500,11 @@ export default function Landing() {
                                 </ol>
                             </div>
                             <div className="bg-white px-4 py-3 text-wrap mt-2">
-                                <div onClick={handleShow}>
+                                <div onClick={handleShow} className="d-flex justify-content-between">
                                     <div className={`font-barlow-semi-bold font-20 text-secondaryColor ${styles.pointer}`}>Authors Guidelines</div>
+                                    <div className="font-20 text-secondaryColor">
+                                        <AiOutlineArrowRight />
+                                    </div>
                                 </div>
                                 <Modal show={show} onHide={handleClose}>
                                     <Modal.Header className="d-flex flex-column">
