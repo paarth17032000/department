@@ -490,19 +490,19 @@ export default function Landing() {
                                 <div className={` ${styles.tertiary_color} font-barlow-semi-bold font-20 mt-1 text-center`}>MODE OF PAYMENT</div>
                                 <div className={styles.hr}></div>
                                 <ol className="mt-4 line-height-33">
-                                    <li className="font-barlow-medium font-16 text-primaryColor ">DD drawn in favor of “Construction Industry Development Council” payable at New Delhi.</li>
-                                    <li className="font-barlow-medium font-16 text-primaryColor ">NEFT transfer: A/c-13810100093936, The Federal Bank Limited, Nehru Place, New Delhi-110019</li>
-                                    <li className="font-barlow-medium font-16 text-primaryColor ">IFSC Code: FDRL0001302</li>
-                                    <li className="font-barlow-medium font-16 text-primaryColor ">You can check further submission guidelines at --</li>
+                                    <li className="font-barlow-medium font-18 text-primaryColor ">DD drawn in favor of “Construction Industry Development Council” payable at New Delhi.</li>
+                                    <li className="font-barlow-medium font-18 text-primaryColor ">NEFT transfer: A/c-13810100093936, The Federal Bank Limited, Nehru Place, New Delhi-110019</li>
+                                    <li className="font-barlow-medium font-18 text-primaryColor ">IFSC Code: FDRL0001302</li>
+                                    {/* <li className="font-barlow-medium font-16 text-primaryColor ">You can check further submission guidelines at --</li>
                                     <a href="www.jssaten.ac.in/ncses2019" className="text-secondaryColor">www.jssaten.ac.in/ncses2019</a>
                                     <li className="font-barlow-medium font-16 text-primaryColor">Authors should submit their manuscripts through mail:
-                                    <span className="text-secondaryColor text-decoration-underline">conference@jssaten.ac.in</span></li>
+                                    <span className="text-secondaryColor text-decoration-underline">conference@jssaten.ac.in</span></li> */}
                                 </ol>
                             </div>
                             <div className="bg-white px-4 py-3 text-wrap mt-2">
-                                <div onClick={handleShow} className="d-flex justify-content-between">
+                                <div onClick={handleShow} className={`d-flex justify-content-between ${styles.pointer}`}>
                                     <div className={`font-barlow-semi-bold font-20 text-secondaryColor ${styles.pointer}`}>Authors Guidelines</div>
-                                    <div className="font-20 text-secondaryColor">
+                                    <div className={`font-20 text-secondaryColor ${styles.pointer}`}>
                                         <AiOutlineArrowRight />
                                     </div>
                                 </div>
