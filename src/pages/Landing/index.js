@@ -55,13 +55,11 @@ export default function Landing() {
     const handleClick = () => {
         console.log(count)
         if(count === 0){
-            console.log(count, 'in 0')
             setNav(styles.white_nav)
             setColor(styles.link_style_black)
             setCount(1)
             
         } else if(count === 1 || window.scrollY === 0) {
-            console.log(count, 'in 1')
             setNav(styles.nav)
             setCount(0)
         }         
